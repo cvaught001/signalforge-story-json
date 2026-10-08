@@ -7,7 +7,21 @@ description: Create or revise SignalForge story JSON in the FinalRevision_v1.14 
 
 Create a complete UTF-8 `.json` story in the format demonstrated by `apps/SignalForge/stories/FinalRevision_v1.14.json`. These instructions and bundled resources work with Claude and Codex; they require no provider-specific tools.
 
-Read [the format guide](references/format.md), [the JSON Schema](references/signalforge-finalrevision.schema.json), and [the neutral template](assets/story-template.json) before creating a story. Resolve these paths relative to this skill folder. The bundle is self-contained; access to the original example is optional.
+Read [the format guide](references/format.md) and [the neutral template](assets/story-template.json). Consult [the JSON Schema](references/signalforge-finalrevision.schema.json) only for uncertain field types or validation errors; the validator loads it automatically. Resolve paths relative to this skill folder. The bundle is self-contained; access to the original example is optional.
+
+## Select the workflow
+
+For an existing Markdown storyboard, use direct conversion below. For a new story idea, use the authoring guidance. Do not search for the original FinalRevision story, other skills, asset collections, or backend documentation just to convert supplied text. External MiniMax review applies only when requested; this bundle does not currently contain an authoritative MiniMax skill.
+
+### Direct conversion
+
+1. Extract metadata, global rules, and scenes in one pass. Preserve titles, order, explicit durations, reference descriptions, visual prompts, audio instructions, dialogue, and speaker IDs. Preserve `<d speaker="host_01">...</d>` tags inside strings; they convey speaker intent but do not guarantee backend voice identity.
+2. Populate the template envelope. Map global and character rules into `global_style`, `story_continuity`, and `negative_prompt`. Keep each existing scene's Markdown in `scene`, including its original headings. The expanded locks below are for newly authored scenes; conversion does not require rewriting a detailed storyboard into all nine sections. Populate `subjects` from visible characters; an off-camera narrator is not a visible subject. Copy descriptive references into `**references`. Leave actual reference arrays empty without supplied paths, set `image_conditioning` to false, and report that images still need attaching.
+3. Treat explicit scene durations as the default source of truth. If their sum conflicts with a header target, preserve the scenes and report both durations. Do not silently shorten dialogue, retime scenes, or loop on competing constraints. Adapt to the target only when explicitly requested. Set nominal `seconds_per_scene` to the most common supplied duration; calculate count and total from actual scenes.
+4. Preserve dialogue verbatim. Perform one brief pacing review and flag likely overlong lines without rewriting unless requested. A rough 120–150 words/minute estimate is a planning heuristic for measured narration, not a MiniMax limit or proof of actual delivery time. Scope historical period restrictions to reenactments when the script explicitly includes a present-day host; preserve the host's supplied wardrobe.
+5. Serialize once, validate once, and fix concrete validation errors. Deliver the JSON and a short list of unresolved input conflicts. Do not render, install tooling, or repeat stylistic reviews during conversion. When tools are unavailable, return complete JSON and say automated validation was unavailable.
+
+Use a supplied profile/workflow when available. Otherwise leave `model-workflow` unset and disabled rather than searching for or asserting a verified backend. Missing assets or backend configuration do not block producing JSON.
 
 ## Authoring
 
