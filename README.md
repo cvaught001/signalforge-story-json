@@ -1,4 +1,4 @@
-# SignalForge Story JSON Skill
+# BETA -SignalForge Story JSON Skill
 
 A portable Claude and Codex skill for creating SignalForge story JSON in the format of `FinalRevision_v1.14.json`.
 
