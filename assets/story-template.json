@@ -1,0 +1,120 @@
+{
+  "$schema": "../references/signalforge-finalrevision.schema.json",
+  "schema": "signalforge.story",
+  "schema_version": "1.0",
+  "project_title": "The Lantern Keeper",
+  "format": "signal-forge-markdown",
+  "version": "1.0",
+  "aspect_ratio": "9:16",
+  "defaults": {
+    "prompt_compilation_mode": "ltx23_concise",
+    "image_conditioning": false,
+    "allow_visible_text": false,
+    "audio_generation": false,
+    "image_strength": 0.7,
+    "image_crf": 10
+  },
+  "negative_prompt": "No duplicate keeper, costume changes, text overlays, watermarks, or unintended sounds.",
+  "audio": false,
+  "global_style": {
+    "description": "Photorealistic live-action vertical 9:16, restrained movement and tactile materials.",
+    "photographic_style": "35mm lens, shallow optical depth of field, subtle film grain, natural motion blur.",
+    "color_palette": [
+      "slate blue",
+      "warm amber",
+      "gray stone"
+    ],
+    "lighting": "Blue dusk and motivated warm lantern light.",
+    "mood": "Quiet anticipation."
+  },
+  "scenes": [
+    {
+      "scene_id": "scene_01",
+      "title": "THROUGH THE ARCHWAY",
+      "duration_seconds": 7,
+      "scene": "**storyboard_lock:** The keeper crosses the stone archway with a lit lantern.\n\n**cast_lock:** Exactly one adult keeper, center frame. No other people.\n\n**character_priority:** The keeper has short dark hair and wears a navy wool coat and brown boots. The brass lantern stays in the right hand.\n\n**portrait_composition:** Vertical 9:16. Tall archway in the background, keeper in midground. Locked camera, 35mm lens, realistic fabric and stone.\n\n**action:** At dusk the keeper pauses before the archway, lifts the lantern slightly, then takes two steady steps through. The warm light moves across the stone.\n\n**audio:** Complete silence; no music, ambience, footsteps, or effects.\n\n**dialogue:** None. The keeper does not speak or mouth words.\n\n**continuity:** Lantern lit throughout, right hand throughout; unchanged coat. End with the keeper beyond the archway.\n\n**negative:** No second person, duplicate lantern, costume change, visible lettering, subtitles, or watermarks.\n\n---",
+      "image_refs": {
+        "references": []
+      },
+      "**references": "** No external images supplied; identity and environment are defined in the prompt.",
+      "**duration": "** 7s",
+      "environment_lock": {
+        "references": []
+      },
+      "subjects": [
+        {
+          "character": "keeper",
+          "description": "adult in navy wool coat, center midground",
+          "action": "lifts lantern and steps through archway"
+        }
+      ]
+    }
+  ],
+  "character_locks": {},
+  "studio": "SignalForge",
+  "model": "MiniMax H3 / Hailuo — Reference to Video",
+  "tone": "quiet cinematic mystery",
+  "dialogue": false,
+  "story_continuity": "One adult keeper carries the same brass lantern through a stone archway at dusk. The keeper wears a navy wool coat throughout. No other people appear. The lantern remains lit. The shot is silent.",
+  "prompt_style_override": "Each scene is one self-contained MiniMax Ref-to-Video generation.\n\nEvery scene must follow this order:\n\n- references\n- duration\n- storyboard_lock\n- cast_lock\n- character_priority\n- truck_lock / prop_lock (when the truck or bucket is in the scene)\n- portrait_composition\n- action\n- audio\n- dialogue\n- continuity\n- negative\n\nOne dominant action per scene.\n\nOne secondary reaction maximum.\n\nActions occur in chronological order.\n\nCharacter movement must remain physically continuous.\n\nNo teleportation.\n\nNo duplicate bodies.\n\nNo unexplained repositioning.\n\nNo identity drift.\n\nNo unmotivated camera cuts.\n\nHorror rhythm: stillness, then a sudden burst, then stillness. Contrast fast zombie movement with a calm locked camera.\n\nTip Toe:\n- wide watchful eyes\n- head tilts of fascination\n- small trembling hand gestures\n- flinches and half-step retreats at sudden zombie movement\n- keeps distance, never touches Mr Floof\n- quick recovery to stillness\n- dance: slow arm extension, head tilt left then right, then curled pointed toes flicking out left and right\n- silent performance only, except the whispered shhh in Scene 06\n- never transforms into another character\n\nMr Floof:\n- feral, hunched, twitching, sniffing\n- sudden lurches\n- lurching run toward the BRAINS bucket\n- clawing hands\n- tips the empty bucket to his face as if drinking\n- deep, slow, gravelly goblin-like zombie voice\n- gritty practical gore makeup, identical in every scene\n- muffled keening once inside the truck\n\nCamera:\n- locked shot\n- very slow push-in\n- restrained lateral track\n- low angle where appropriate\n- hold final pose long enough to read\n\nPhotorealism: every shot must look like real live-action film footage, 35mm grain, real skin texture, practical makeup, no CGI.\n\nNo frantic handheld camera. The chaos is in the zombie's body, not the camera.\n\nAudio rules:\n- the only sound in Scenes 01 through 06 is Mr Floof's deep goblin-like growling and keening with slow drawn-out brains lines\n- his voice is very low, gravelly, croaking, with a wet rattle and hissing s\n- no music, no sound effects, no ambience, no footsteps, no doors, no engine, no rain\n- Scene 07 adds door-pounding thuds, Mr Floof's deep scream, and crowd shrieks and cheers\n- Scene 08 adds crowd zombie groans\n- Tip Toe makes no vocal sound of any kind and never lip-syncs, except one whispered shhh at the end of Scene 06\n- Mr Floof's words play only when his mouth is on screen or no face is visible; otherwise wordless growling\n\nCast rule:\n- each scene's cast_lock is authoritative: only those characters, each exactly once\n- characters are always named explicitly (\"Tip Toe\", \"Mr Floof\"), never only \"he\"\n- Tip Toe is the only driver of the truck\n- Scenes 01 through 06: only Tip Toe and Mr Floof appear\n- Scenes 07 and 08: a costumed party crowd appears; in Scene 08 they wear extreme zombie makeup and dance in sync behind Tip Toe\n- any figure seen inside the truck is Mr Floof\n- no partygoer looks like Tip Toe or Mr Floof\n\nTip Toe's magic is expressed through presence rather than visual effects.\n\nAllowed:\n- uncanny focus\n- exact timing\n- eerie stillness\n- controlled gestures\n- graceful miniature movement\n- knowing eye contact\n- unnatural but subtle head tilts\n\nDo not add:\n- glowing hands\n- sparkles\n- portals\n- levitation\n- magical particles\n- spell effects\n- fantasy energy beams\n\nReference priority is strict:\n\n1. Character references are authoritative for identity.\n2. Storyboard references are authoritative for story beat, blocking, and action.\n3. Truck reference is authoritative for truck design, graphics, and lettering.\n4. Storyboard composition must be recomposed for 9:16 portrait rather than copied literally.\n\nCharacter references control:\n- facial identity\n- hairstyle\n- body proportions\n- costume\n- makeup\n- signature shoes\n- recognizable silhouette\n\nStoryboard references control:\n- what happens\n- sequence of actions\n- relative positions\n- scene intent\n\nPortrait recomposition rule:\n- preserve storyboard action\n- preserve who is foreground / midground / background\n- rebuild framing vertically\n- favor depth rather than side-by-side landscape staging\n- keep faces, hands, shoes, truck opening, and action readable in 9:16\n- do not preserve the original horizontal geometry literally\n\nTruck identity lock:\n- older white cab-over commercial box truck\n- large black text: HAUNTED HOUSE PROPS\n- orange jack-o'-lantern graphic\n- black haunted-castle silhouette\n- small black bats\n- aged realistic work-truck surface\n- no redesign\n- no alternate vehicle",
+  "runtime": {
+    "scene_count": 1,
+    "total_seconds": 7,
+    "seconds_per_scene": 7
+  },
+  "render_settings": {
+    "enabled": [
+      "profile",
+      "model-workflow",
+      "resolution",
+      "concat"
+    ],
+    "values": {
+      "profile": "profiles/local.json",
+      "ltx-root": "",
+      "model-workflow": "minimax_h3_reference_turbo_4step",
+      "pipeline-mode": "",
+      "output-root": "",
+      "gemma-root": "",
+      "distilled-checkpoint-path": "",
+      "transformer-path": "",
+      "text-encoder-path": "",
+      "video-vae-path": "",
+      "audio-vae-path": "",
+      "duration-head-path": "",
+      "lora-path": "",
+      "lora-strength": "0.8",
+      "spatial-upsampler-path": "",
+      "python-executable": "",
+      "comfyui-server": "http://127.0.0.1:8188",
+      "comfyui-root": "",
+      "comfyui-workflow": "",
+      "comfyui-timeout": "7200",
+      "start": "",
+      "end": "",
+      "seed": "",
+      "resolution": "vertical_9x16_576x1024",
+      "frame-rate": "",
+      "width": "",
+      "height": "",
+      "output-width": "",
+      "output-height": "",
+      "force-num-frames": "",
+      "max-batch-size": "",
+      "quantization": "",
+      "offload": "",
+      "cooldown-seconds": "",
+      "retries": "",
+      "retry-delay": "",
+      "progress-interval": "30",
+      "image-frame": "",
+      "image-strength": "",
+      "image-crf": "",
+      "image-anchor-x": "",
+      "image-anchor-y": "",
+      "video-conditioning-strength": "0.3",
+      "clip-postfix": "",
+      "final-output": ""
+    }
+  }
+}
